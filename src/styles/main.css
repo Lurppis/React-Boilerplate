@@ -1,0 +1,199 @@
+/**
+ * Responsive Breakpoint Manager 
+ *
+ * 0px - 600px:       Small
+ * 600px - 900px:     Medium
+ * 900px - 1140px:    Large
+ * 1800px and more:   Huge
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500");
+/**
+ * Basic reset of font-size, box-sizing, margin and padding.
+ *
+ * 1. Thanks to this declaration You can easily build layout based on rem unit.
+ *    At normal state (without any media queries) 1rem is equal to 10px.
+ *    Value is calculated assuming that 1rem is originally 16px.
+ *    You can change that by adding next function parameter, e.g. 'px-to-percent(10px, 20px)'.
+ */
+html {
+  font-size: 62.5%;
+  /* 1 */
+  box-sizing: border-box; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 56.25%; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  background-color: #f0f0f0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 100; }
+
+.page-title {
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: 0.1rem; }
+
+.article-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem; }
+  @media (max-width: 37.5em) {
+    .article-title {
+      font-size: 2rem; } }
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 500; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1rem; }
+
+.header {
+  background-image: linear-gradient(to right, #369ae7, #4b44a8);
+  padding: 1.5rem 0; }
+  .header__title {
+    letter-spacing: 0.1rem; }
+    @media (max-width: 37.5em) {
+      .header__title {
+        margin-bottom: 1rem; } }
+  .header__logo {
+    max-height: 70px;
+    width: auto; }
+  .header__box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; }
+
+.navigation {
+  display: flex;
+  align-items: center; }
+  .navigation__list {
+    list-style: none; }
+  .navigation__item {
+    display: inline-block; }
+    .navigation__item:not(:last-child) {
+      margin-right: 2rem; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      width: 100%;
+      text-align: center; } }
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem; }
+  @media (max-width: 37.5em) {
+    .navigation__link {
+      font-size: 1.6rem;
+      font-weight: 500; } }
+  .navigation__link--active, .navigation__link--active:link, .navigation__link--active:visited {
+    color: #f7ae5c; }
+
+.wrapper {
+  max-width: 114rem;
+  margin: 0 auto; }
+  @media (max-width: 71.25em) {
+    .wrapper {
+      padding: 0 1rem; } }
+
+.jumbo {
+  background-color: #cecece;
+  padding: 5rem;
+  margin: 1rem 0;
+  border-radius: 0.6rem;
+  color: black; }
+
+.article {
+  color: black;
+  text-align: justify;
+  margin-bottom: 4rem; }
+  .article--text-center {
+    text-align: center; }
+
+.buttons-box {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 37.5em) {
+    .buttons-box {
+      flex-direction: column;
+      align-items: center; } }
+
+.button {
+  border: none;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  background-color: #369ae7;
+  color: #f0f0f0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.1s; }
+  .button:active {
+    outline: none;
+    transform: translateY(0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: #f7ae5c; }
+  .button:disabled {
+    opacity: 0.5; }
+  .button:focus {
+    outline: none; }
+  .button:not(:last-child) {
+    margin-right: 1rem; }
+    @media (max-width: 37.5em) {
+      .button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 1rem; } }
+  .button--small {
+    font-size: 1.3rem;
+    padding: 0.4rem 0.8rem;
+    margin-left: 1rem; }
+
+.list {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 300;
+  list-style: none;
+  max-width: 70rem;
+  margin: 0 auto 2rem auto; }
+  .list__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0; }
+    .list__item:not(:last-child) {
+      border-bottom: 1px solid #4b44a8; }
+  .list__item-value {
+    max-width: 75%;
+    word-wrap: break-word; }
+  .list__form {
+    display: flex;
+    max-width: 70rem;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between; }
+  .list__input {
+    border: none;
+    width: 100%;
+    margin-right: 1rem;
+    font-family: inherit;
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(54, 154, 231, 0.5);
+    border-radius: 0;
+    border-radius: 10rem;
+    transition: all 0.2s; }
+    .list__input:focus {
+      outline: none;
+      border-bottom: 2px solid #f7ae5c; }

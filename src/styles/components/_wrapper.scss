@@ -1,0 +1,8 @@
+.wrapper {
+  max-width: 114rem;
+  margin: 0 auto;
+
+  @include respond('large') {
+    padding: 0 1rem;
+  }
+}
